@@ -1,0 +1,53 @@
+.navbar {
+    height: 5rem;
+    width: 100vw;
+    max-width: 85rem;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-image: linear-gradient(to right, #3313e8, #0d055d);
+    border-bottom: 1px solid var(--color-green); 
+    border-radius: 10px;
+
+}
+
+.logo {
+    object-fit: cover;
+    height: 4rem;
+    width: 4rem;
+}
+
+.nav-items {
+    color: var(--color-green);
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.nav-items:hover {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.contactMeBtn, .contactMeBtn:hover {
+    background-color: var(--color-green);
+    color: black;
+    border: none;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    padding: 0 1rem;
+    border-radius: 2rem;
+    font-weight: 700;
+}
+
+.contactMeImg {
+    height: 1rem;
+    width: 1rem;
+    margin: 0.5rem;
+}

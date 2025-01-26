@@ -1,0 +1,30 @@
+
+{
+    "navbar": {
+        "logo": {
+            "name": "Logo",
+            "url": "/",
+            "img": "logo.png"
+        },
+        "links": [
+            {
+                "name": "Home",
+                "url": "/"
+            },
+            {
+                "name": "About",
+                "url": "/about"
+            },
+            {
+                "name": "Contact",
+                "url": "/contact"
+            }
+        ]   
+    },
+    "intro": {
+        "name":"Avik",
+        "designation":"Web Deginer & Developer",
+        "summary":"I am a web developer with 6 years of experience. I have worked on various projects and have a good understanding of web technologies."
+
+    }
+}
