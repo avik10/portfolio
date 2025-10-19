@@ -41,8 +41,6 @@ const Skills = ({ skills = data.skills, interval = 3000 }) => {
   return (
     <div
       className="skills"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
       onKeyDown={handleKeyDown}
       tabIndex={0}
       role="region"
