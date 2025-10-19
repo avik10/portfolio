@@ -1,0 +1,115 @@
+/* ...existing code... */
+.skills {
+  width: 100%;
+  max-width: 95vw;
+  margin: 0 auto;
+  position: relative;
+  padding: 16px;
+  box-sizing: border-box;
+  color: #fff;
+  outline: none;
+  background: linear-gradient(180deg,#0f1724,#071029);
+  border-radius: 10px;
+}
+
+/* viewport uses horizontal scrolling + snap; scrollbar hidden */
+.skills__viewport {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  padding: 8px 0;
+}
+
+/* hide native scrollbar */
+.skills__viewport::-webkit-scrollbar { display: none; }
+.skills__viewport { -ms-overflow-style: none; scrollbar-width: none; }
+
+.skills__track {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 6px;
+}
+
+/* each item is a card; multiple cards visible in the viewport */
+.skills__item {
+  flex: 0 0 auto;
+  min-width: 160px; /* adjust to show more/fewer cards */
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.skills__card {
+  background: rgba(7,17,50,0.95);
+  padding: 16px 18px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  transition: transform .18s ease, box-shadow .18s ease;
+  width: 100%;
+}
+
+.skills__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.55);
+}
+
+.skills__controls {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.skills__btn {
+  pointer-events: auto;
+  background: rgba(255,255,255,0.06);
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.skills__btn:focus { outline: 2px solid rgba(96,165,250,0.5); }
+
+.skills__dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.skills__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.skills__dot--active {
+  background: #60a5fa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .skills__item { min-width: 140px; }
+}
+@media (max-width: 520px) {
+  .skills__item { min-width: 120px; }
+  .skills__card { padding: 12px; font-size: 14px; }
+}
+/* ...existing code... */

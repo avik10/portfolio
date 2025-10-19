@@ -1,3 +1,4 @@
+import Experaince from "./components/experances/expeiance";
 import Intro from "./components/Intro/Intro";
 import Navbar from "./components/Navbar/Navbar";
 import Skills from "./components/Skills/Skills";
@@ -9,7 +10,9 @@ function App() {
     <>
     <Navbar />
     <Intro />
-    {/* <Skills /> */}
+    <Skills />
+    <Experaince />
+    
     </>
   );
 }

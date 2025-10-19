@@ -1,4 +1,3 @@
-
 {
     "navbar": {
         "logo": {
@@ -22,9 +21,64 @@
         ]   
     },
     "intro": {
-        "name":"Avik",
-        "designation":"Web Deginer & Developer",
-        "summary":"I am a web developer with 6 years of experience. I have worked on various projects and have a good understanding of web technologies."
-
-    }
+        "name": "Avik Bhattacharjya",
+        "designation": "Web Designer & Developer",
+        "summary": "With 7 years of hands-on experience in web development, I specialize in crafting modern, responsive websites and dynamic web applications. My journey spans diverse industries, where I’ve delivered innovative solutions using the latest technologies. I’m passionate about turning ideas into seamless digital experiences that delight users and drive results."
+    },
+    "experiences": [
+        {
+            "company": "Ltimindtree",
+            "role": "Fullstack Developer",
+            "designation":"Speialists software engineer",
+            "period": "APR 2025 — Present",
+            "location": "Kolkata, India",
+            "description": "Led a comprehensive UI redesign and built a modular component library, delivering pixel-perfect, accessible interfaces with faster load times, improved developer productivity, and higher user engagement.",
+            "tech": ["Angular", "TypeScript", "Tailwind", "Vite", "HTML/CSS", "React", "Node.js", "Express", "MongoDB", "Team Building"],
+            "logo": "https://companieslogo.com/img/orig/LTIM.NS-dea59dc6.png?t=1720244492"
+        },
+        {
+            "company": "Infosys Pvt Ltd",
+            "role": "Frontend(UI) Developer",
+            "designation":"TECHNICAL ANALYST",
+            "period": "JUN 2023 — 2025",
+            "location": "Bhubaneswar, India",
+            "description": "Spearheaded a UI revamp and built a reusable component library for customer-facing products, delivering pixel-perfect, accessible interfaces and faster load times while collaborating closely with designers and backend teams.",
+            "tech": ["Next.js", "Node.js", "Postgres", "GraphQL", "Angular", "TypeScript", "RxJS", "NgRx", "Angular Material", "Angular CLI", "SCSS"],
+            "logo": "https://1000logos.net/wp-content/uploads/2020/08/Infosys-Logo.png"
+        },
+        {
+            "company": "Tata Consultancy Services",
+            "role": "Web Developer",
+            "designation":"Sr Systems Engineer",
+            "period": "FEB 2019 - 2023",
+            "location": "Kolkata, India",
+            "description": "Led development of responsive, accessible UI components and marketing/e‑commerce pages, delivering pixel‑perfect implementations and improved performance. Built and maintained UI automation suites (Cypress/Selenium) and integration tests to catch regressions early, streamline releases, and reduce manual QA effort.",
+            "tech": ["HTML/CSS", "jQuery", "JavaScript", "Angular", "Redux", "Cypress", "Selenium", "TestNG", "JIRA", "Confluence"],
+            "logo": "https://media.licdn.com/dms/image/v2/D5612AQGDEC6APIBRPA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1726116477867?e=2147483647&v=beta&t=lWZOAij6o6IS--YSN_QPMfZyZiR48HYzBMgmaBkw80Y"
+        }
+    ],
+    "skills": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Bootstrap",
+        "TypeScript",
+        "React",
+        "Angular",
+        "Next.js",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "PostgreSQL",
+        "Tailwind CSS",
+        "Material UI",
+        "Sass/SCSS",
+        "Git & GitHub",
+        "Cypress",
+        "Selenium",
+        "JIRA",
+        "Agile Methodologies",
+        "Responsive Design",
+        "UI/UX Principles"
+    ]
 }

@@ -1,58 +1,77 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import './Skills.css'
+import data from '../data.json'
 
-const Skills = () => {
+const Skills = ({ skills = data.skills, interval = 3000 }) => {
+  const [index, setIndex] = useState(0)
+  const timerRef = useRef(null)
+  const viewportRef = useRef(null)
+
+  useEffect(() => {
+    // autoplay
+    timerRef.current = setInterval(() => setIndex(i => (i + 1) % skills.length), interval)
+    return () => clearInterval(timerRef.current)
+  }, [skills.length, interval])
+
+  const prev = () => setIndex(i => (i - 1 + skills.length) % skills.length)
+  const next = () => setIndex(i => (i + 1) % skills.length)
+
+  const handleMouseEnter = () => clearInterval(timerRef.current)
+  const handleMouseLeave = () => {
+    clearInterval(timerRef.current)
+    timerRef.current = setInterval(() => setIndex(i => (i + 1) % skills.length), interval)
+  }
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'ArrowLeft') prev()
+    if (e.key === 'ArrowRight') next()
+  }
+
+  // scroll to the item whenever index changes
+  useEffect(() => {
+    const vp = viewportRef.current
+    if (!vp) return
+    const items = vp.querySelectorAll('.skills__item')
+    const el = items[index]
+    if (el && typeof el.scrollIntoView === 'function') {
+      el.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' })
+    }
+  }, [index])
+
   return (
-    <div>
-      <div class="container">
-        <div class="row">
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="row">
-                  
-                  <div class="col-md-2 col-sm-6 col-12">
-                    <a href="#">asdasdsdas</a>
-                  </div>
-                  <div class="col-md-2 col-sm-6 col-12">
-                    <a href="#">asdasdsdas</a>
-                  </div>
-                  <div class="col-md-2 col-sm-6 col-12">
-                    <a href="#">asdasdsdas</a>
-                  </div>
-                  <div class="col-md-2 col-sm-6 col-12">
-                    <a href="#">asdasdsdas</a>
-                  </div>
-                  <div class="col-md-2 col-sm-6 col-12">
-                    <a href="#">asdasdsdas</a>
-                  </div>
-                  <div class="col-md-2 col-sm-6 col-12">
-                    <a href="#">asdasdsdas</a>
-                  </div>
-                  <div class="col-md-2 col-sm-6 col-12">
-                    <a href="#">asdasdsdas</a>
-                  </div>
-                  <div class="col-md-2 col-sm-6 col-12">
-                    <a href="#">asdasdsdas</a>
-                  </div>
-                  <div class="col-md-2 col-sm-6 col-12">
-                    <a href="#">asdasdsdas</a>
-                  </div>
-                  <div class="col-md-2 col-sm-6 col-12">
-                    <a href="#">asdasdsdas</a>
-                  </div>
-                </div>
-              </div>
+    <div
+      className="skills"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+      role="region"
+      aria-label="Skills carousel"
+    >
+      <div className="skills__viewport" ref={viewportRef}>
+        <div className="skills__track">
+          {skills.map((s, i) => (
+            <div className="skills__item" key={i}>
+              <div className="skills__card">{s}</div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
+          ))}
         </div>
+      </div>
+
+      <div className="skills__controls">
+        <button className="skills__btn" aria-label="Previous" onClick={prev}>‹</button>
+        <button className="skills__btn" aria-label="Next" onClick={next}>›</button>
+      </div>
+
+      <div className="skills__dots">
+        {skills.map((_s, i) => (
+          <button
+            key={i}
+            className={`skills__dot ${i === index ? 'skills__dot--active' : ''}`}
+            onClick={() => setIndex(i)}
+            aria-label={`Go to skill ${i + 1}`}
+          />
+        ))}
       </div>
     </div>
   )
