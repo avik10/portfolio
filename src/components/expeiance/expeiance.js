@@ -2,7 +2,7 @@ import React from 'react';
 import './experiance.css';
 import data from '../data.json'
 
-const Experaince = ({ experiences: [] = data.experiences }) => {
+const Experaince = ({ experiences = data.experiences }) => {
     return (
         <section className="xp-section" id="experience">
             <div className="xp-inner">
