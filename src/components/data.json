@@ -18,7 +18,7 @@
                 "name": "Contact",
                 "url": "/contact"
             }
-        ]   
+        ]
     },
     "intro": {
         "name": "Avik Bhattacharjya",
@@ -29,56 +29,178 @@
         {
             "company": "Ltimindtree",
             "role": "Fullstack Developer",
-            "designation":"Speialists software engineer",
+            "designation": "Speialists software engineer",
             "period": "APR 2025 — Present",
             "location": "Kolkata, India",
             "description": "Led a comprehensive UI redesign and built a modular component library, delivering pixel-perfect, accessible interfaces with faster load times, improved developer productivity, and higher user engagement.",
-            "tech": ["Angular", "TypeScript", "Tailwind", "Vite", "HTML/CSS", "React", "Node.js", "Express", "MongoDB", "Team Building"],
+            "tech": [
+                "Angular",
+                "TypeScript",
+                "Tailwind",
+                "Vite",
+                "HTML/CSS",
+                "React",
+                "Node.js",
+                "Express",
+                "MongoDB",
+                "Team Building"
+            ],
             "logo": "https://companieslogo.com/img/orig/LTIM.NS-dea59dc6.png?t=1720244492"
         },
         {
             "company": "Infosys Pvt Ltd",
             "role": "Frontend(UI) Developer",
-            "designation":"TECHNICAL ANALYST",
+            "designation": "TECHNICAL ANALYST",
             "period": "JUN 2023 — 2025",
             "location": "Bhubaneswar, India",
             "description": "Spearheaded a UI revamp and built a reusable component library for customer-facing products, delivering pixel-perfect, accessible interfaces and faster load times while collaborating closely with designers and backend teams.",
-            "tech": ["Next.js", "Node.js", "Postgres", "GraphQL", "Angular", "TypeScript", "RxJS", "NgRx", "Angular Material", "Angular CLI", "SCSS"],
+            "tech": [
+                "Next.js",
+                "Node.js",
+                "Postgres",
+                "GraphQL",
+                "Angular",
+                "TypeScript",
+                "RxJS",
+                "NgRx",
+                "Angular Material",
+                "Angular CLI",
+                "SCSS"
+            ],
             "logo": "https://1000logos.net/wp-content/uploads/2020/08/Infosys-Logo.png"
         },
         {
             "company": "Tata Consultancy Services",
             "role": "Web Developer",
-            "designation":"Sr Systems Engineer",
+            "designation": "Sr Systems Engineer",
             "period": "FEB 2019 - 2023",
             "location": "Kolkata, India",
             "description": "Led development of responsive, accessible UI components and marketing/e‑commerce pages, delivering pixel‑perfect implementations and improved performance. Built and maintained UI automation suites (Cypress/Selenium) and integration tests to catch regressions early, streamline releases, and reduce manual QA effort.",
-            "tech": ["HTML/CSS", "jQuery", "JavaScript", "Angular", "Redux", "Cypress", "Selenium", "TestNG", "JIRA", "Confluence"],
+            "tech": [
+                "HTML/CSS",
+                "jQuery",
+                "JavaScript",
+                "Angular",
+                "Redux",
+                "Cypress",
+                "Selenium",
+                "TestNG",
+                "JIRA",
+                "Confluence"
+            ],
             "logo": "https://media.licdn.com/dms/image/v2/D5612AQGDEC6APIBRPA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1726116477867?e=2147483647&v=beta&t=lWZOAij6o6IS--YSN_QPMfZyZiR48HYzBMgmaBkw80Y"
         }
     ],
     "skills": [
-        "HTML5",
-        "CSS3",
-        "JavaScript",
-        "Bootstrap",
-        "TypeScript",
-        "React",
-        "Angular",
-        "Next.js",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "PostgreSQL",
-        "Tailwind CSS",
-        "Material UI",
-        "Sass/SCSS",
-        "Git & GitHub",
-        "Cypress",
-        "Selenium",
-        "JIRA",
-        "Agile Methodologies",
-        "Responsive Design",
-        "UI/UX Principles"
+        {
+            "name": "HTML5",
+            "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
+        },
+        {
+            "name": "CSS3",
+            "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+        },
+        {
+            "name": "JavaScript",
+            "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+        },
+        {
+            "name": "Bootstrap",
+            "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain.svg"
+        },
+        {
+            "name": "TypeScript",
+            "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+        },
+        {
+            "name": "React",
+            "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+        },
+        {
+            "name": "Angular",
+            "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg"
+        },
+        {
+            "name": "Next.js",
+            "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/nextdotjs.svg"
+        },
+        {
+            "name": "Node.js",
+            "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
+        },
+        {
+            "name": "Express",
+            "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg"
+        },
+        {
+            "name": "MongoDB",
+            "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg"
+        },
+        {
+            "name": "PostgreSQL",
+            "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg"
+        },
+        {
+            "name": "Tailwind CSS",
+            "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg"
+        },
+        {
+            "name": "Material UI",
+            "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/materialui.svg"
+        },
+        {
+            "name": "Sass/SCSS",
+            "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
+        },
+        {
+            "name": "Git",
+            "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
+        },
+        {
+            "name": "GitHub",
+            "logo": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+        },
+        {
+            "name": "Cypress",
+            "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/cypress.svg"
+        },
+        {
+            "name": "Selenium",
+            "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/selenium.svg"
+        },
+        {
+            "name": "JIRA",
+            "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/jira.svg"
+        },
+        {
+            "name": "Agile Methodologies",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Agile_Manifesto_logo.svg"
+        },
+        {
+            "name": "Responsive Design",
+            "logo": "https://img.icons8.com/fluency/48/000000/responsive.png"
+        },
+        {
+            "name": "UI/UX Principles",
+            "logo": "https://img.icons8.com/fluency/48/000000/ux-design.png"
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "title": "Yatri Sathi",
+            "description": "A Taxi web app that does toto booking for the locality travel with user authentication and admin panel.",
+            "tech": [
+                "React",
+                "Node",
+                "Express",
+                "MongoDB",
+                "Tailwind",
+                "Vite",
+                "Netlify"
+            ],
+            "repo": "https://github.com/avik10/Yatra",
+            "live": "https://yatri-sathi.netlify.app"
+        }
     ]
 }

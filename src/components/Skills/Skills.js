@@ -52,7 +52,16 @@ const Skills = ({ skills = data.skills, interval = 3000 }) => {
         <div className="skills__track">
           {skills.map((s, i) => (
             <div className="skills__item" key={i}>
-              <div className="skills__card">{s}</div>
+              <div className="skills__card">{s.name}</div>
+              <div className="skills__logo">
+                <img
+                  height={50}
+                  width={50}
+                  src={s.logo}
+                  alt={`${typeof s === 'string' ? s : s.name} logo`}
+                  onError={(e) => { e.currentTarget.style.display = 'none' }}
+                />
+              </div>
             </div>
           ))}
         </div>

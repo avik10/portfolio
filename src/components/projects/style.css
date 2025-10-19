@@ -1,0 +1,245 @@
+/* ...existing code... */
+.projects-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  color: #111;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.projects-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #93c5fd;
+}
+
+/* Computer mockup */
+.computer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  margin: 0 auto 1rem;
+}
+
+.monitor-bezel {
+  background: darkgray;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35), inset 0 2px 6px rgba(255,255,255,0.03);
+  width: min(1000px, 95%);
+}
+
+.monitor-screen {
+  background: linear-gradient(180deg, #0f1724 0%, #071022 100%);
+  border-radius: 6px;
+  padding: 10px;
+  min-height: 360px;
+  color: #e6eef8;
+}
+
+/* Projects grid inside the screen */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  align-items: stretch;
+}
+
+/* Card */
+.project-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.45);
+}
+
+.project-img {
+  background-size: cover;
+  background-position: center;
+  height: 120px;
+  min-height: 100px;
+}
+
+/* Info */
+.project-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #e6eef8;
+}
+
+.project-title {
+  margin: 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.project-desc {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #cfe3ff;
+  flex: 1;
+}
+
+.project-tech {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tech-pill {
+  background: rgba(255,255,255,0.06);
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  color: #dceeff;
+}
+
+/* Links */
+.project-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+.project-links a {
+  color: #bfe1ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.project-links a:hover { text-decoration: underline; }
+
+/* Monitor stand */
+.monitor-stand { display:flex; flex-direction:column; align-items:center; margin-top: 8px; }
+.stand-neck {
+  width: 10px; height: 40px; background: darkgray; border-radius: 4px;
+}
+.stand-base {
+  width: 120px; height: 12px; background: darkgray; border-radius: 6px; margin-top: 6px;
+}
+
+/* New vertical layout: list on left, preview computer on right */
+.projects-vertical {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  width: min(1100px, 95%);
+}
+
+/* Project list (left) */
+.project-list {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Slightly adapted card for list mode */
+.project-card {
+  cursor: pointer;
+  padding: 10px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: transform .15s ease, border-color .15s ease, background .15s ease;
+}
+.project-card:hover, .project-card:focus {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.045);
+}
+.project-card.selected {
+  border-color: #60a5fa; /* blue highlight */
+  background: linear-gradient(180deg, rgba(96,165,250,0.06), rgba(96,165,250,0.02));
+}
+
+/* compact info inside list */
+.project-info-compact .project-title { margin: 0 0 6px 0; font-size: 1.05rem; color: #fff; }
+.project-info-compact .project-desc { margin: 0 0 8px 0; font-size: 0.9rem; color: #cfe3ff; }
+
+/* Computer preview (right) re-uses monitor styles but larger */
+.computer-preview { display: flex; flex-direction: column; gap: 12px; align-items: center; flex: 1; }
+
+/* ensure preview monitor uses available width */
+.monitor-bezel.preview {
+  width: 100%;
+  max-width: 720px;
+  padding: 6px;
+}
+.monitor-iframe{
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.monitor-screen.preview-screen {
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* image inside the monitor */
+.monitor-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+/* placeholder if no image */
+.monitor-placeholder {
+  color: #93c5fd;
+  font-size: 1.1rem;
+}
+
+/* preview meta below monitor */
+.preview-meta { text-align: center; color: #e6eef8; padding: 6px 8px; }
+.preview-title { margin: 6px 0 2px; font-size: 1.05rem; color: #fff; }
+.preview-desc { margin: 0 0 8px; color: #cfe3ff; font-size: 0.95rem; }
+.preview-links { display:flex; gap: 12px; justify-content:center; }
+.preview-links a { color: #bfe1ff; font-weight:600; text-decoration:none; }
+.preview-links a:hover { text-decoration: underline; }
+
+/* Responsive: stack on small screens */
+@media (max-width: 900px) {
+  .projects-vertical { flex-direction: column; align-items: stretch; gap: 16px; }
+  .project-list { width: 100%; order: 2; }
+  .computer-preview { order: 1; }
+  .monitor-screen.preview-screen { min-height: 300px; }
+}
+@media (max-width: 980px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .monitor-bezel { padding: 14px; }
+}
+@media (max-width: 640px) {
+  .projects-grid { grid-template-columns: 1fr; }
+  .monitor-bezel { padding: 10px; }
+  .monitor-screen { min-height: auto; }
+  .computer { flex-direction: column; }
+  .monitor-stand { display: none; }
+}
+
+/* small note */
+.note {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+/* ...existing code... */
