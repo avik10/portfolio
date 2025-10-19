@@ -1,4 +1,4 @@
-import Experaince from "./components/experances/expeiance";
+import Experaince from "./components/expeiance/expeiance";
 import Intro from "./components/Intro/Intro";
 import Navbar from "./components/Navbar/Navbar";
 import Skills from "./components/Skills/Skills";
