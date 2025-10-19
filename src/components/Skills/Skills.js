@@ -4,7 +4,6 @@ import data from '../data.json'
 
 const Skills = ({ skills = data.skills, interval = 3000 }) => {
   const [index, setIndex] = useState(0)
-  const timerRef = useRef(null)
   const viewportRef = useRef(null)
 
   // useEffect(() => {
