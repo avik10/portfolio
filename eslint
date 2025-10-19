@@ -1,0 +1,64 @@
+// .eslintrc.js
+module.exports = {
+    root: true,
+    env: {
+        browser: true,
+        node: true,
+        es2021: true,
+    },
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        ecmaVersion: 2021,
+        sourceType: 'module',
+        ecmaFeatures: { jsx: true },
+    },
+    plugins: ['@typescript-eslint', 'react', 'jsx-a11y', 'import'],
+    extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:react/recommended',
+        'plugin:jsx-a11y/recommended',
+        'prettier',
+    ],
+    settings: {
+        react: { version: 'detect' },
+    },
+    rules: {
+        // stylistic choices
+        'semi': ['error', 'always'],
+        'quotes': ['error', 'single', { avoidEscape: true }],
+        'comma-dangle': ['error', 'only-multiline'],
+
+        // best practices
+        'eqeqeq': ['error', 'always'],
+        'no-console': 'warn',
+        'no-debugger': 'error',
+        'prefer-const': 'error',
+
+        // import
+        'import/no-unresolved': 'off', // adjust if you use bundler/TS path aliases
+
+        // TypeScript specific
+        '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+
+        // React
+        'react/jsx-uses-react': 'off',
+        'react/react-in-jsx-scope': 'off',
+    },
+    overrides: [
+        {
+            files: ['*.js'],
+            rules: {
+                '@typescript-eslint/no-var-requires': 'off',
+                'no-unused-vars': 'off',
+            },
+        },
+        {
+            files: ['*.test.*', '**/__tests__/**'],
+            env: { jest: true },
+            rules: { 'no-console': 'off' },
+        },
+    ],
+}

@@ -7,20 +7,20 @@ const Skills = ({ skills = data.skills, interval = 3000 }) => {
   const timerRef = useRef(null)
   const viewportRef = useRef(null)
 
-  useEffect(() => {
-    // autoplay
-    timerRef.current = setInterval(() => setIndex(i => (i + 1) % skills.length), interval)
-    return () => clearInterval(timerRef.current)
-  }, [skills.length, interval])
+  // useEffect(() => {
+  //   // autoplay
+  //   timerRef.current = setInterval(() => setIndex(i => (i + 1) % skills.length), interval)
+  //   return () => clearInterval(timerRef.current)
+  // }, [skills.length, interval])
 
   const prev = () => setIndex(i => (i - 1 + skills.length) % skills.length)
   const next = () => setIndex(i => (i + 1) % skills.length)
 
-  const handleMouseEnter = () => clearInterval(timerRef.current)
-  const handleMouseLeave = () => {
-    clearInterval(timerRef.current)
-    timerRef.current = setInterval(() => setIndex(i => (i + 1) % skills.length), interval)
-  }
+  // const handleMouseEnter = () => clearInterval(timerRef.current)
+  // const handleMouseLeave = () => {
+  //   clearInterval(timerRef.current)
+  //   timerRef.current = setInterval(() => setIndex(i => (i + 1) % skills.length), interval)
+  // }
 
   const handleKeyDown = (e) => {
     if (e.key === 'ArrowLeft') prev()
