@@ -1,85 +1,50 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import './Skills.css'
 import data from '../data.json'
 
-const Skills = ({ skills = data.skills, interval = 3000 }) => {
-  const [index, setIndex] = useState(0)
-  const viewportRef = useRef(null)
+const SKILLS = data.skills
 
-  // useEffect(() => {
-  //   // autoplay
-  //   timerRef.current = setInterval(() => setIndex(i => (i + 1) % skills.length), interval)
-  //   return () => clearInterval(timerRef.current)
-  // }, [skills.length, interval])
+const Skills = () => {
+  const scrollerRef = useRef(null)
 
-  const prev = () => setIndex(i => (i - 1 + skills.length) % skills.length)
-  const next = () => setIndex(i => (i + 1) % skills.length)
-
-  // const handleMouseEnter = () => clearInterval(timerRef.current)
-  // const handleMouseLeave = () => {
-  //   clearInterval(timerRef.current)
-  //   timerRef.current = setInterval(() => setIndex(i => (i + 1) % skills.length), interval)
-  // }
-
-  const handleKeyDown = (e) => {
-    if (e.key === 'ArrowLeft') prev()
-    if (e.key === 'ArrowRight') next()
+  const scroll = direction => {
+    const el = scrollerRef.current
+    if (!el) return
+    const offset = el.clientWidth // scroll by the visible width for page-like behavior
+    el.scrollBy({ left: direction === 'next' ? offset : -offset, behavior: 'smooth' })
   }
 
-  // scroll to the item whenever index changes
-  useEffect(() => {
-    const vp = viewportRef.current
-    if (!vp) return
-    const items = vp.querySelectorAll('.skills__item')
-    const el = items[index]
-    if (el && typeof el.scrollIntoView === 'function') {
-      el.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' })
-    }
-  }, [index])
+  const onKeyDown = e => {
+    if (e.key === 'ArrowRight') scroll('next')
+    if (e.key === 'ArrowLeft') scroll('prev')
+  }
 
   return (
-    <div
-      className="skills"
-      onKeyDown={handleKeyDown}
-      tabIndex={0}
-      role="region"
-      aria-label="Skills carousel"
-    >
-      <div className="skills__viewport" ref={viewportRef}>
-        <div className="skills__track">
-          {skills.map((s, i) => (
-            <div className="skills__item" key={i}>
-              <div className="skills__card">{s.name}</div>
-              <div className="skills__logo">
-                <img
-                  height={50}
-                  width={50}
-                  src={s.logo}
-                  alt={`${typeof s === 'string' ? s : s.name} logo`}
-                  onError={(e) => { e.currentTarget.style.display = 'none' }}
-                />
-              </div>
-            </div>
-          ))}
+    <section className="skills-section" aria-label="Skills carousel" onKeyDown={onKeyDown} tabIndex={0}>
+      <div className="skills-header">
+        <h2>Skills</h2>
+        <div className="controls">
+          <button className="ctrl" aria-label="Previous skills" onClick={() => scroll('prev')}>‹</button>
+          <button className="ctrl" aria-label="Next skills" onClick={() => scroll('next')}>›</button>
         </div>
       </div>
 
-      <div className="skills__controls">
-        <button className="skills__btn" aria-label="Previous" onClick={prev}>‹</button>
-        <button className="skills__btn" aria-label="Next" onClick={next}>›</button>
-      </div>
-
-      <div className="skills__dots">
-        {skills.map((_s, i) => (
-          <button
-            key={i}
-            className={`skills__dot ${i === index ? 'skills__dot--active' : ''}`}
-            onClick={() => setIndex(i)}
-            aria-label={`Go to skill ${i + 1}`}
-          />
+      <div className="skills-carousel" ref={scrollerRef}>
+        {SKILLS.map(skill => (
+          <article key={skill.id} className="skill-card" aria-label={`${skill.name} skill card`}>
+            <div className="skill-top">
+              <div className="skill-logo">
+                <img src={skill.logo} alt={`${skill.name} logo`} />
+              </div>
+              <div className="skill-meta">
+                <div className="skill-name">{skill.name}</div>
+                <div className="skill-description">{skill.description}</div>
+              </div>
+            </div>
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 

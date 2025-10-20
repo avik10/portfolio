@@ -94,94 +94,117 @@
     "skills": [
         {
             "name": "HTML5",
+            "description": "The standard markup language for structuring web content and semantic pages.",
             "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
         },
         {
             "name": "CSS3",
+            "description": "Styling language for layout, visuals, and responsive design across devices.",
             "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
         },
         {
             "name": "JavaScript",
+            "description": "Programming language for adding interactivity, client-side logic, and DOM manipulation.",
             "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
         },
         {
             "name": "Bootstrap",
+            "description": "Responsive, component-based CSS framework for rapid UI development.",
             "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain.svg"
         },
         {
             "name": "TypeScript",
+            "description": "Typed superset of JavaScript that improves maintainability and tooling.",
             "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
         },
         {
             "name": "React",
+            "description": "Component-based library for building declarative and reusable UIs.",
             "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
         },
         {
             "name": "Angular",
+            "description": "Full-featured frontend framework for building scalable single-page applications.",
             "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg"
         },
         {
             "name": "Next.js",
+            "description": "React framework for server-side rendering, static export, and optimized routing.",
             "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/nextdotjs.svg"
         },
         {
             "name": "Node.js",
+            "description": "JavaScript runtime for building fast, event-driven server-side applications.",
             "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
         },
         {
             "name": "Express",
+            "description": "Minimal web framework for Node.js to build APIs and web servers.",
             "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg"
         },
         {
             "name": "MongoDB",
+            "description": "Document-oriented NoSQL database for flexible, schema-less data storage.",
             "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg"
         },
         {
             "name": "PostgreSQL",
+            "description": "Advanced open-source relational database with strong SQL and extensibility.",
             "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg"
         },
         {
             "name": "Tailwind CSS",
+            "description": "Utility-first CSS framework for rapidly composing custom designs.",
             "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg"
         },
         {
             "name": "Material UI",
+            "description": "React component library implementing Material Design for consistent UIs.",
             "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/materialui.svg"
         },
         {
             "name": "Sass/SCSS",
+            "description": "CSS preprocessor that adds variables, nesting, and modular styles.",
             "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
         },
         {
             "name": "Git",
+            "description": "Distributed version control system for tracking and collaborating on code.",
             "logo": "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg"
         },
         {
             "name": "GitHub",
+            "description": "Platform for hosting Git repositories, code review, and collaboration.",
             "logo": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
         },
         {
             "name": "Cypress",
+            "description": "End-to-end testing framework for fast, reliable browser tests.",
             "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/cypress.svg"
         },
         {
             "name": "Selenium",
+            "description": "Browser automation tool for cross-browser functional testing.",
             "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/selenium.svg"
         },
         {
             "name": "JIRA",
+            "description": "Issue and project tracking tool for agile planning and team workflows.",
             "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/jira.svg"
         },
         {
             "name": "Agile Methodologies",
+            "description": "Iterative development practices focused on collaboration and continuous delivery.",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Agile_Manifesto_logo.svg"
         },
         {
             "name": "Responsive Design",
+            "description": "Design approach to ensure layouts adapt gracefully across screen sizes.",
             "logo": "https://img.icons8.com/fluency/48/000000/responsive.png"
         },
         {
             "name": "UI/UX Principles",
+            "description": "Guidelines and practices to create usable, accessible, and delightful experiences.",
             "logo": "https://img.icons8.com/fluency/48/000000/ux-design.png"
         }
     ],

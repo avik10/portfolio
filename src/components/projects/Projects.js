@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './style.css'
+import './project.css'
 import data from '../data.json'
 
 const Projects = () => {

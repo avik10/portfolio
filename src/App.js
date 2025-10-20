@@ -3,6 +3,7 @@ import Intro from "./components/Intro/Intro";
 import Navbar from "./components/Navbar/Navbar";
 import Skills from "./components/Skills/Skills";
 import Projects from "./components/projects/Projects";
+import Clients from "./components/clients/clients";
 
 
 
@@ -14,7 +15,7 @@ function App() {
     <Skills />
     <Experaince />
     <Projects />
-    
+    <Clients />
     </>
   );
 }
