@@ -3,8 +3,10 @@ import logo from '../../images/logo1.png'
 import contactImg from '../../images/contact.png'
 import { Link } from 'react-scroll'
 import './Navbar.css'
+import data from '../data.json'
 
 const Navbar = () => {
+    const navValues = data.navbar.links
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
@@ -23,11 +25,18 @@ const Navbar = () => {
         </button>
 
         <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-          <Link className="nav-items" to="home" smooth={true} duration={500} onClick={() => setIsMenuOpen(false)}>Home</Link>
-          <Link className="nav-items" to="about" smooth={true} duration={500} onClick={() => setIsMenuOpen(false)}>About</Link>
-          <Link className="nav-items" to="skills" smooth={true} duration={500} onClick={() => setIsMenuOpen(false)}>Skills</Link>
-          <Link className="nav-items" to="projects" smooth={true} duration={500} onClick={() => setIsMenuOpen(false)}>Projects</Link>
-          <Link className="nav-items" to="work-with" smooth={true} duration={500} onClick={() => setIsMenuOpen(false)}>Work With</Link>
+          {navValues.map((link, index) => (
+            <Link
+              key={index}
+              className="nav-items"
+              to={link.url}
+              smooth={true}
+              duration={500}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
 
         <button className="btn contactMeBtn">
