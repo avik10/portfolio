@@ -8,11 +8,11 @@ import hireme from '../../images/hireme.png'
 const Intro = () => {
   return (
     <section className='intro-section'>
-      <div className='intro-bg'>
-        <div className='intro-profile'>
+      <div className='intro-bg row'>
+        <div className='intro-profile col-md-4 col-sm-12'>
           <img src={profileImg} alt='Profile' className='profile-img' />
         </div>
-        <div className='intro-details'>
+        <div className='intro-details col-md-8 col-sm-12'>
           <h1 className='intro-greeting'>
             Hi, I'm <span className='intro-name'>{data.intro.name}</span>
           </h1>
