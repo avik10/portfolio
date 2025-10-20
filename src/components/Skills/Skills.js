@@ -34,7 +34,7 @@ const Skills = () => {
           <article key={skill.id} className="skill-card" aria-label={`${skill.name} skill card`}>
             <div className="skill-top">
               <div className="skill-logo">
-                <img src={skill.logo} alt={`${skill.name} logo`} />
+                <img src={skill.logo} alt={`${skill.name}`} />
               </div>
               <div className="skill-meta">
                 <div className="skill-name">{skill.name}</div>
