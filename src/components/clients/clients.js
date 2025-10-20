@@ -34,7 +34,7 @@ const Clients = () => {
           <article key={c.id} className="client-card" aria-label={`${c.name} client card`}>
             <div className="client-top">
               {/* <div className="client-logo" aria-hidden>{c.name.split(' ').map(p => p[0]).slice(0,2).join('')}</div> */}
-              <img className="client-logo" aria-hidden src={c.image}/>
+              <img className="client-logo" aria-hidden src={c.image} alt={c.name}/>
               <div className="client-meta">
                 <div className="client-name">{c.name}</div>
                 <div className="client-role">{c.role}</div>

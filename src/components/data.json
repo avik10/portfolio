@@ -232,35 +232,28 @@
             "name": "Emami Ltd.",
             "role": "FMCG Partner",
             "quote": "Their front-end refresh improved conversion on our product pages and reduced load times across devices.",
-            "image": "https://via.placeholder.com/150?text=Emami"
-        },
-        {
-            "id": 2,
-            "name": "CESC Ltd.",
-            "role": "Utility Partner",
-            "quote": "Delivered a reliable, accessible portal for bill payments and outage notifications that our customers find easy to use.",
-            "image": "https://via.placeholder.com/150?text=CESC"
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFFWDnVvZg0BOYAi1p3gei0B0VpkremGF9Ww&s"
         },
         {
             "id": 3,
             "name": "Exide Industries",
             "role": "Manufacturing Partner",
             "quote": "Helped modernize our dealer portal and streamline order workflows with clear UX and stable integrations.",
-            "image": "https://via.placeholder.com/150?text=Exide"
+            "image": "https://bsmedia.business-standard.com/_media/bs/img/article/2023-08/08/full/1691506809-0565.jpg?im=FitAndFill=(826,465)"
         },
         {
             "id": 4,
             "name": "Titagarh Rail Systems",
             "role": "Engineering Partner",
             "quote": "Built modular dashboards that gave our operations team real-time visibility into production KPIs.",
-            "image": "https://via.placeholder.com/150?text=Titagarh+Rail"
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZn9FbqZat6Dzjxcq4nHtg2EMC1_3qdO0iBA&s"
         },
         {
             "id": 5,
             "name": "Apollo Hospitals, Kolkata",
             "role": "Healthcare Partner",
             "quote": "Implemented a patient-facing booking system that reduced wait times and noticeably improved patient experience.",
-            "image": "https://via.placeholder.com/150?text=Apollo+Kolkata"
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUTHcJsIlvPGkMULAzYAl9y-TXN8aFcThDrg&s"
         }
     ]
 }
