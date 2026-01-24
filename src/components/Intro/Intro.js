@@ -14,7 +14,7 @@ const Intro = () => {
         </div>
         <div className='intro-details col-md-8 col-sm-12'>
           <h1 className='intro-greeting'>
-            Hi, I'm <span className='intro-name'>{data.intro.name}</span>
+            Hi, I'm <p className='intro-name cursor typewriter-animation'>{data.intro.name.trim()}</p>
           </h1>
           <h2 className='intro-role'>
             <span className='animated-text'>{data.intro.designation}</span>
