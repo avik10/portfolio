@@ -94,6 +94,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradient-shift 4s ease infinite;
+  margin: 10% auto 0;
 }
 
 .intro-role {
@@ -210,7 +211,6 @@
 .cursor{
     position: relative;
     width: 24em;
-    margin: 0 auto;
     border-right: 2px solid rgba(255,255,255,.75);
     font-size: 30px;
     text-align: center;
@@ -229,7 +229,7 @@
   to { width:100%; }
 }
 @keyframes blinkingCursor{
-  from { border-right-color: rgba(255,255,255,.75); }
+  from { border-right-color: transparent}
   to { border-right-color: transparent; }
 }
 

@@ -7,16 +7,32 @@
         },
         "links": [
             {
-                "name": "Home",
-                "url": "/"
+                "name": "Intro",
+                "url": "intro"
             },
             {
-                "name": "About",
-                "url": "/about"
+                "name": "Experience",
+                "url": "experience"
+            },
+            {
+                "name": "Skills",
+                "url": "skills"
+            },
+            {
+                "name": "AI Exposer",
+                "url": "aiexposer"
+            },
+            {
+                "name": "Projects",
+                "url": "projects"
+            },
+            {
+                "name": "Testimonials",
+                "url": "testimonials"
             },
             {
                 "name": "Contact",
-                "url": "/contact"
+                "url": "hireme"
             }
         ]
     },
@@ -206,6 +222,58 @@
             "name": "UI/UX Principles",
             "description": "Guidelines and practices to create usable, accessible, and delightful experiences.",
             "logo": "https://img.icons8.com/fluency/48/000000/ux-design.png"
+        }
+    ],
+    "aiexposer": [
+        {
+            "title": "Generative AI Integration",
+            "description": "Implemented OpenAI's GPT-4 API to create intelligent chatbots and content assistants, enhancing user engagement and automating support workflows."
+        },
+        {
+            "title": "Predictive Analytics Dashboard",
+            "description": "Developed data visualization tools using Python and ML libraries to forecast trends and provide actionable business insights."
+        },
+        {
+            "title": "Computer Vision Solutions",
+            "description": "Built client-side image recognition features using TensorFlow.js for automated tagging and quality control processes."
+        }
+    ],
+    "aiTools": [
+        {
+            "name": "TensorFlow",
+            "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tensorflow.svg"
+        },
+        {
+            "name": "PyTorch",
+            "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/pytorch.svg"
+        },
+        {
+            "name": "scikit-learn",
+            "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/scikitlearn.svg"
+        },
+        {
+            "name": "OpenAI",
+            "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/openai.svg"
+        },
+        {
+            "name": "Hugging Face",
+            "logo": "https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
+        },
+        {
+            "name": "GitHub Copilot",
+            "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/githubcopilot.svg"
+        },
+        {
+            "name": "Factory.ai",
+            "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/azurefunctions.svg"
+        },
+        {
+            "name": "Replit",
+            "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/replit.svg"
+        },
+        {
+            "name": "Gemini",
+            "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/google.svg"
         }
     ],
     "projects": [
