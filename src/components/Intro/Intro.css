@@ -36,7 +36,6 @@
 
 .intro-bg {
   display: flex;
-  gap: 4rem;
   padding: 3rem;
   border-radius: var(--radius-xl);
   background: rgba(255, 255, 255, 0.03);
@@ -99,12 +98,13 @@
 
 .intro-role {
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .intro-role .animated-text {
   font-size: 1.5rem;
   font-weight: 600;
-  background: linear-gradient(90deg, var(--accent-orange), var(--accent-pink), var(--accent-purple));
+  background: linear-gradient(90deg, #FF9933, #FFFFFF, #138808);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -117,7 +117,21 @@
   font-size: 1.1rem;
   color: var(--gray-400);
   line-height: 1.7;
-  max-width: 550px;
+}
+
+.intro-summary-highlighted{
+  display: inline-block;
+  background-color: transparent;
+  padding: 0 4px;
+  /* border-radius: 4px; */
+  animation: highlight 0.5s ease-out forwards;
+}
+
+@keyframes highlight {
+  to {
+    background-color: rgba(0, 139, 139, 0.606); /* darkcyan with 25% opacity */
+    color: yellowgreen;
+  }
 }
 
 .intro-actions {
@@ -207,12 +221,12 @@
 /* Animation */
 .typewriter-animation {
   animation: 
-    typewriter 5s steps(50) 1s 1 normal both, 
-    blinkingCursor 500ms steps(50) infinite normal;
+    typewriter 5s steps(80) 1s 1 normal both, 
+    blinkingCursor 500ms steps(80) infinite normal;
 }
 @keyframes typewriter {
   from { width: 0; }
-  to { width: 100%; }
+  to { width:100%; }
 }
 @keyframes blinkingCursor{
   from { border-right-color: rgba(255,255,255,.75); }

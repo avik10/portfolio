@@ -100,11 +100,11 @@ const Navbar = () => {
       >
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
-            <div className="modal-header">
+            <div className="modal-header" style={{ backgroundColor: '#1f2235', color: 'white' }}>
               <h5 className="modal-title" id="contactModalLabel">Contact Me</h5>
               <button
                 type="button"
-                className="btn-close"
+                className="btn-close btn-close-white"
                 data-bs-dismiss="modal"
                 aria-label="Close"
               ></button>
