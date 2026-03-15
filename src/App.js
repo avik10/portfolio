@@ -7,10 +7,12 @@ import Clients from "./components/clients/clients";
 import Footer from "./components/Footer/Footer";
 import AiExposer from "./components/Ai Exposer/AiExposer";
 import Education from "./components/education/Education";
+import BackgroundAnimation from "./components/BackgroundAnimation";
 
 function App() {
   return (
     <>
+    <BackgroundAnimation />
     <Navbar />
     <Intro />
     <Skills />

@@ -6,7 +6,7 @@
   padding: 6rem 2rem 4rem;
   position: relative;
   overflow: hidden;
-  background-color: var(--bg-body);
+  background-color: transparent;
 }
 
 .intro-section::before {
@@ -250,7 +250,8 @@ body.light-theme .hireMeBtn:hover {
 }
 
 body.light-theme .hireMeImg {
-  filter: none;
+  /* Make icon dark on light theme for better contrast */
+  filter: brightness(0.1);
 }
 
 body.light-theme .hireMeBtn:hover .hireMeImg {
