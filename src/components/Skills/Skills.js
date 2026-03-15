@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import './Skills.css'
 import data from '../data.json'
 
@@ -18,6 +18,20 @@ const Skills = () => {
     if (e.key === 'ArrowRight') scroll('next')
     if (e.key === 'ArrowLeft') scroll('prev')
   }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const el = scrollerRef.current
+      if (!el) return
+      // Check if we've reached the end of the scroll area
+      if (el.scrollLeft + el.clientWidth >= el.scrollWidth - 5) {
+        el.scrollTo({ left: 0, behavior: 'smooth' })
+      } else {
+        scroll('next')
+      }
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <section className="skills-section" id="skills" aria-label="Skills carousel" onKeyDown={onKeyDown} tabIndex={0}>

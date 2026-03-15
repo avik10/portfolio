@@ -16,6 +16,7 @@ const Experaince = ({ experiences = data.experiences }) => {
                                 <div>
                                     <h3 className="xp-role">{xp.role}</h3>
                                     <p className="xp-company">{xp.company} · <span className="xp-location">{xp.location}</span></p>
+                                    <p className="xp-designation" style={{ color: 'var(--accent-cyan)', fontWeight: 'bold', marginTop: '5px' }}>{xp.designation}</p>
                                 </div>
 
                                 {/* company logo (URL comes from data.json via xp.logo) */}
