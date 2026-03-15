@@ -6,6 +6,7 @@ import Projects from "./components/projects/Projects";
 import Clients from "./components/clients/clients";
 import Footer from "./components/Footer/Footer";
 import AiExposer from "./components/Ai Exposer/AiExposer";
+import Education from "./components/education/Education";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
     <Navbar />
     <Intro />
     <Skills />
+    <Education />
     <Experaince />
     <Projects />
     <Clients />

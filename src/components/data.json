@@ -15,6 +15,10 @@
                 "url": "experience"
             },
             {
+                "name": "Education",
+                "url": "education"
+            },
+            {
                 "name": "Skills",
                 "url": "skills"
             },
@@ -237,7 +241,33 @@
             "repo": "https://github.com/avik10/Yatra",
             "live": "https://yatri-sathi.netlify.app"
         }
-            ],
+    ],
+    "education": [
+        {
+            "id": 1,
+            "institution": "SASTRA Deemed University",
+            "degree": "Master's in Computer Applications (MCA)",
+            "period": "2020 - 2023",
+            "location": "Tanjavur, India",
+            "description": "Completed a comprehensive curriculum focused on software development, algorithms, and data structures. Final year project involved developing a real-time collaborative coding platform."
+        },
+        {
+            "id": 2,
+            "institution": "Burdwan University",
+            "degree": "Bachelor's in Computer Applications (BCA)",
+            "period": "2015 - 2018",
+            "location": "Bankura, India",
+            "description": "Completed a comprehensive curriculum focused on software development, algorithms, and data structures. Final year project involved developing a real-time collaborative coding platform."
+        },
+        {
+            "id": 3,
+            "institution": "Higher Secondary Education Council, West Bengal",
+            "degree": "Higher Secondary Education",
+            "period": "2012 - 2014",
+            "location": "Bankura, India",
+            "description": "Completed a comprehensive curriculum focused on software development, algorithms, and data structures. Final year project involved developing a real-time collaborative coding platform."
+        }
+    ],
     "clients": [
         {
             "id": 1,

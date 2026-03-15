@@ -6,7 +6,7 @@ const Experaince = ({ experiences = data.experiences }) => {
     return (
         <section className="xp-section" id="experience">
             <div className="xp-inner">
-                <h2 className="xp-title">Experience</h2>
+                <h2 className="xp-title">Experiences</h2>
                 <p className="xp-subtitle">7 years building elegant, maintainable web experiences.</p>
 
                 <div className="xp-list">
