@@ -2,7 +2,6 @@ import React from 'react'
 import './Intro.css'
 import profileImg from '../../images/image.png'
 import data from '../data.json'
-import { Link } from 'react-scroll'
 import hireme from '../../images/hireme.png'
 
 const Intro = () => {
