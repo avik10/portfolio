@@ -10,7 +10,7 @@ const Experaince = ({ experiences = data.experiences }) => {
                 <p className="xp-subtitle">7 years building elegant, maintainable web experiences.</p>
 
                 <div className="xp-list">
-                    {data.experiences.map(xp => (
+                    {experiences.map(xp => (
                         <article key={xp.id} className="xp-card" aria-label={`${xp.role} at ${xp.company}`}>
                             <header className="xp-card-head">
                                 <div>

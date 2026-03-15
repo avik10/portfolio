@@ -7,7 +7,7 @@ import hireme from '../../images/hireme.png'
 
 const Intro = () => {
   return (
-    <section className='intro-section'>
+    <section className='intro-section' id='intro'>
       <div className='intro-bg row'>
         <div className='intro-details col-md-6 col-sm-12'>
           <h1 className='intro-greeting'>
@@ -32,11 +32,13 @@ const Intro = () => {
             <a href='/resume.docx' download className='download-btn'>
               <i className='fa fa-download'></i> Download Resume
             </a>
-            <Link to='hireme' smooth={true} duration={1000}>
-              <button className='btn hireMeBtn'>
-                <img src={hireme} className='hireMeImg' alt='Hire me' /> Hire Me
-              </button>
-            </Link>
+            <button
+              className='btn hireMeBtn'
+              data-bs-toggle="modal"
+              data-bs-target="#contactModal"
+            >
+              <img src={hireme} className='hireMeImg' alt='Hire me' /> Hire Me
+            </button>
           </div>
         </div>
         <div className='intro-profile col-md-6 col-sm-12'>

@@ -8,7 +8,8 @@ const Projects = () => {
   const selected = data.projects.find(p => p.id === selectedId) || data.projects[0]
 
   return (
-    <section className="projects-section" aria-label="Projects - computer view">
+    <section className="projects-section" id="projects" aria-label="Projects - computer view">
+      <div className="projects-container">
       <h2 className="projects-title">Projects</h2>
 
       <div className="projects-vertical">
@@ -82,6 +83,7 @@ const Projects = () => {
       </div>
 
       <p className="note">Tip: click a project to preview it on the computer mockup.</p>
+      </div>
     </section>
   )
 }

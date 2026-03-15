@@ -8,15 +8,27 @@
         "links": [
             {
                 "name": "Home",
-                "url": "/"
+                "url": "intro"
             },
             {
-                "name": "About",
-                "url": "/about"
+                "name": "Experience",
+                "url": "experience"
             },
             {
-                "name": "Contact",
-                "url": "/contact"
+                "name": "Skills",
+                "url": "skills"
+            },
+            {
+                "name": "AI Explorations",
+                "url": "ai-exposer"
+            },
+            {
+                "name": "Projects",
+                "url": "projects"
+            },
+            {
+                "name": "Testimonials",
+                "url": "clients"
             }
         ]
     },
@@ -30,7 +42,7 @@
             "company": "Ltimindtree",
             "role": "Fullstack Developer",
             "designation": "Speialists software engineer",
-            "period": "APR 2025 — Present",
+            "period": "JUN 2023 — Present",
             "location": "Kolkata, India",
             "description": "Led a comprehensive UI redesign and built a modular component library, delivering pixel-perfect, accessible interfaces with faster load times, improved developer productivity, and higher user engagement.",
             "tech": [
@@ -51,7 +63,7 @@
             "company": "Infosys Pvt Ltd",
             "role": "Frontend(UI) Developer",
             "designation": "TECHNICAL ANALYST",
-            "period": "JUN 2023 — 2025",
+            "period": "FEB 2021 — MAY 2023",
             "location": "Bhubaneswar, India",
             "description": "Spearheaded a UI revamp and built a reusable component library for customer-facing products, delivering pixel-perfect, accessible interfaces and faster load times while collaborating closely with designers and backend teams.",
             "tech": [
@@ -73,7 +85,7 @@
             "company": "Tata Consultancy Services",
             "role": "Web Developer",
             "designation": "Sr Systems Engineer",
-            "period": "FEB 2019 - 2023",
+            "period": "FEB 2019 - JAN 2021",
             "location": "Kolkata, India",
             "description": "Led development of responsive, accessible UI components and marketing/e‑commerce pages, delivering pixel‑perfect implementations and improved performance. Built and maintained UI automation suites (Cypress/Selenium) and integration tests to catch regressions early, streamline releases, and reduce manual QA effort.",
             "tech": [
@@ -225,7 +237,7 @@
             "repo": "https://github.com/avik10/Yatra",
             "live": "https://yatri-sathi.netlify.app"
         }
-    ],
+            ],
     "clients": [
         {
             "id": 1,

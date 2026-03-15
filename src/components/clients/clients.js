@@ -20,29 +20,31 @@ const Clients = () => {
   }
 
   return (
-    <section className="clients-section" aria-label="Clients carousel" onKeyDown={onKeyDown} tabIndex={0}>
-      <div className="clients-header">
-        <h2>Clients</h2>
-        <div className="controls">
-          <button className="ctrl" aria-label="Previous clients" onClick={() => scroll('prev')}>‹</button>
-          <button className="ctrl" aria-label="Next clients" onClick={() => scroll('next')}>›</button>
+    <section className="clients-section" id="clients" aria-label="Clients carousel" onKeyDown={onKeyDown} tabIndex={0}>
+      <div className="clients-container">
+        <div className="clients-header">
+          <h2>Clients</h2>
+          <div className="controls">
+            <button className="ctrl" aria-label="Previous clients" onClick={() => scroll('prev')}>‹</button>
+            <button className="ctrl" aria-label="Next clients" onClick={() => scroll('next')}>›</button>
+          </div>
         </div>
-      </div>
 
-      <div className="clients-carousel" ref={scrollerRef}>
-        {CLIENTS.map(c => (
-          <article key={c.id} className="client-card" aria-label={`${c.name} client card`}>
-            <div className="client-top">
-              {/* <div className="client-logo" aria-hidden>{c.name.split(' ').map(p => p[0]).slice(0,2).join('')}</div> */}
-              <img className="client-logo" aria-hidden src={c.image} alt={c.name}/>
-              <div className="client-meta">
-                <div className="client-name">{c.name}</div>
-                <div className="client-role">{c.role}</div>
+        <div className="clients-carousel" ref={scrollerRef}>
+          {CLIENTS.map(c => (
+            <article key={c.id} className="client-card" aria-label={`${c.name} client card`}>
+              <div className="client-top">
+                {/* <div className="client-logo" aria-hidden>{c.name.split(' ').map(p => p[0]).slice(0,2).join('')}</div> */}
+                <img className="client-logo" aria-hidden src={c.image} alt={c.name}/>
+                <div className="client-meta">
+                  <div className="client-name">{c.name}</div>
+                  <div className="client-role">{c.role}</div>
+                </div>
               </div>
-            </div>
-            <blockquote className="client-quote">“{c.quote}”</blockquote>
-          </article>
-        ))}
+              <blockquote className="client-quote">“{c.quote}”</blockquote>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   )

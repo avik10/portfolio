@@ -6,6 +6,7 @@
   padding: 6rem 2rem 4rem;
   position: relative;
   overflow: hidden;
+  background-color: var(--bg-body);
 }
 
 .intro-section::before {
@@ -15,7 +16,7 @@
   left: 10%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+  background: var(--bg-glow-primary);
   border-radius: 50%;
   filter: blur(60px);
   animation: float 8s ease-in-out infinite;
@@ -28,7 +29,7 @@
   right: 10%;
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, transparent 70%);
+  background: var(--bg-glow-accent);
   border-radius: 50%;
   filter: blur(60px);
   animation: float 6s ease-in-out infinite reverse;
@@ -38,11 +39,11 @@
   display: flex;
   padding: 3rem;
   border-radius: var(--radius-xl);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-card);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-glass);
   position: relative;
   z-index: 1;
   max-width: 1100px;
@@ -61,9 +62,9 @@
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid transparent;
-  background: linear-gradient(var(--dark-surface), var(--dark-surface)) padding-box,
-              linear-gradient(135deg, var(--primary-500), var(--accent-cyan), var(--accent-purple)) border-box;
-  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.25);
+  background: linear-gradient(var(--bg-body), var(--bg-body)) padding-box,
+              linear-gradient(135deg, var(--primary-500), var(--accent-cyan)) border-box;
+  box-shadow: var(--shadow-primary-glow);
   animation: float 4s ease-in-out infinite, pulse-glow 3s ease-in-out infinite;
   transition: transform var(--transition-slow);
 }
@@ -83,17 +84,18 @@
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
-  color: var(--gray-100);
+  color: var(--text-main);
   line-height: 1.2;
 }
 
 .intro-name {
-  background: linear-gradient(135deg, var(--primary-400) 0%, var(--accent-cyan) 50%, var(--accent-purple) 100%);
+  background: linear-gradient(135deg, var(--primary-400) 0%, var(--accent-cyan) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradient-shift 4s ease infinite;
+  margin: 10% auto 0;
 }
 
 .intro-role {
@@ -112,10 +114,18 @@
   animation: gradient-shift 3s ease infinite;
 }
 
+body.light-theme .intro-role .animated-text {
+  background: linear-gradient(90deg, var(--text-secondary), var(--text-main), var(--text-secondary));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .intro-summary {
   margin: 1rem 0;
   font-size: 1.1rem;
-  color: var(--gray-400);
+  color: var(--text-muted);
   line-height: 1.7;
 }
 
@@ -129,8 +139,8 @@
 
 @keyframes highlight {
   to {
-    background-color: rgba(0, 139, 139, 0.606); /* darkcyan with 25% opacity */
-    color: yellowgreen;
+    background-color: var(--bg-tech-pill-hover);
+    color: var(--text-tech-pill);
   }
 }
 
@@ -160,8 +170,8 @@
 
 .download-btn {
   background: transparent;
-  color: var(--gray-100);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-main);
+  border: 2px solid var(--border-medium);
 }
 
 .download-btn::before {
@@ -177,7 +187,7 @@
 .download-btn:hover {
   border-color: transparent;
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+  box-shadow: var(--shadow-hover);
 }
 
 .download-btn:hover::before {
@@ -185,21 +195,71 @@
 }
 
 .hireMeBtn {
+  background: transparent;
+  color: var(--text-main);
+  box-shadow: var(--shadow-glass);
+  z-index: 1;
+}
+
+/* Base background for Hire Me button */
+.hireMeBtn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
   background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
-  color: white;
-  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.35);
+  z-index: -2;
+}
+
+/* Hover overlay (same as download button) */
+.hireMeBtn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--primary-500), var(--accent-cyan));
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  z-index: -1;
 }
 
 .hireMeBtn:hover {
-  background: linear-gradient(135deg, var(--primary-400), var(--primary-500));
+  /* Background change handled by ::before opacity */
   transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(99, 102, 241, 0.5);
+  box-shadow: var(--shadow-hover);
+}
+
+.hireMeBtn:hover::before {
+  opacity: 1;
 }
 
 .hireMeImg {
-  width: 22px;
-  height: 22px;
-  filter: brightness(10);
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+/* Light theme: make Hire Me button behave like Download button */
+body.light-theme .hireMeBtn {
+  background: transparent;
+  border: 2px solid var(--border-medium);
+  /* color is already var(--text-main) from base .hireMeBtn style */
+}
+
+body.light-theme .hireMeBtn:hover {
+  border-color: transparent; /* Let the gradient from ::before show */
+  color: white; /* On hover, the gradient is bright, so white text is better */
+}
+
+body.light-theme .hireMeImg {
+  filter: none;
+}
+
+body.light-theme .hireMeBtn:hover .hireMeImg {
+  filter: brightness(0) invert(1); /* Make icon white on hover to match text */
+}
+
+/* Hide the dark-theme base gradient in light theme, but allow the hover gradient */
+body.light-theme .hireMeBtn::after {
+  display: none;
 }
 
 .download-btn i {
@@ -210,8 +270,7 @@
 .cursor{
     position: relative;
     width: 24em;
-    margin: 0 auto;
-    border-right: 2px solid rgba(255,255,255,.75);
+    border-right: 2px solid var(--text-secondary);
     font-size: 30px;
     text-align: center;
     white-space: nowrap;
@@ -229,7 +288,7 @@
   to { width:100%; }
 }
 @keyframes blinkingCursor{
-  from { border-right-color: rgba(255,255,255,.75); }
+  from { border-right-color: transparent}
   to { border-right-color: transparent; }
 }
 

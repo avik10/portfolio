@@ -20,29 +20,31 @@ const Skills = () => {
   }
 
   return (
-    <section className="skills-section" aria-label="Skills carousel" onKeyDown={onKeyDown} tabIndex={0}>
-      <div className="skills-header">
-        <h2>Skills</h2>
-        <div className="controls">
-          <button className="ctrl" aria-label="Previous skills" onClick={() => scroll('prev')}>‹</button>
-          <button className="ctrl" aria-label="Next skills" onClick={() => scroll('next')}>›</button>
+    <section className="skills-section" id="skills" aria-label="Skills carousel" onKeyDown={onKeyDown} tabIndex={0}>
+      <div className="skills-container">
+        <div className="skills-header">
+          <h2>Skills</h2>
+          <div className="controls">
+            <button className="ctrl" aria-label="Previous skills" onClick={() => scroll('prev')}>‹</button>
+            <button className="ctrl" aria-label="Next skills" onClick={() => scroll('next')}>›</button>
+          </div>
         </div>
-      </div>
 
-      <div className="skills-carousel" ref={scrollerRef}>
-        {SKILLS.map(skill => (
-          <article key={skill.id} className="skill-card" aria-label={`${skill.name} skill card`}>
-            <div className="skill-top">
-              <div className="skill-logo">
-                <img src={skill.logo} alt={`${skill.name}`} />
+        <div className="skills-carousel" ref={scrollerRef}>
+          {SKILLS.map(skill => (
+            <article key={skill.id} className="skill-card" aria-label={`${skill.name} skill card`}>
+              <div className="skill-top">
+                <div className="skill-logo">
+                  <img src={skill.logo} alt={`${skill.name}`} />
+                </div>
+                <div className="skill-meta">
+                  <div className="skill-name">{skill.name}</div>
+                  <div className="skill-description">{skill.description}</div>
+                </div>
               </div>
-              <div className="skill-meta">
-                <div className="skill-name">{skill.name}</div>
-                <div className="skill-description">{skill.description}</div>
-              </div>
-            </div>
-          </article>
-        ))}
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   )
