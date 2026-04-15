@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import './AiExposer.css'
-import data from '../data.json'
+import data from '../../data.json'
 
 const AiExposer = () => {
   const scrollerRef = useRef(null)
@@ -52,7 +52,7 @@ const AiExposer = () => {
   }
 
   return (
-    <section className="ai-section" id="ai-exposer">
+    <section className="ai-section" id="ai-explorations" aria-label="AI explorations and projects">
       <div className="ai-container">
         <h2 className="ai-title">AI Explorations</h2>
         <p className="ai-subtitle">Leveraging artificial intelligence to solve complex problems.</p>

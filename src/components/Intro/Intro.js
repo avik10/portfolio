@@ -1,8 +1,8 @@
 import React from 'react'
 import './Intro.css'
-import profileImg from '../../images/image.png'
-import data from '../data.json'
+import data from '../../data.json'
 import hireme from '../../images/hireme.png'
+import LogoRotation from '../LogoRotation/LogoRotation'
 
 const Intro = () => {
   return (
@@ -41,15 +41,7 @@ const Intro = () => {
           </div>
         </div>
         <div className='intro-profile col-md-6 col-sm-12'>
-          <div className="social-links">
-            <a href="https://www.facebook.com/share/16tukWZdFe/" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <i className="fa fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/avik.bhattacharjya?igsh=a3ZxaDZ2YjI1ZHRl" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <i className="fa fa-instagram"></i>
-            </a>
-          </div>
-          <img src={profileImg} alt='Profile' className='profile-img' />
+          <LogoRotation />
         </div>
       </div>
     </section>

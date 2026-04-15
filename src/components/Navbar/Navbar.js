@@ -4,12 +4,13 @@ import contactImg from '../../images/contact.png'
 import { Link } from 'react-scroll'
 import emailjs from 'emailjs-com'
 import './Navbar.css'
-import data from '../data.json'
+import data from '../../data.json'
 
 const Navbar = () => {
   const navValues = data.navbar.links
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [theme, setTheme] = useState('dark')
+  const [isScrolled, setIsScrolled] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -30,6 +31,18 @@ const Navbar = () => {
   useEffect(() => {
     document.body.classList.toggle('light-theme', theme === 'light')
   }, [theme])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const handleChange = e => {
     const { name, value } = e.target
@@ -65,34 +78,40 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="navbar">
+      <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
         <div className="navbar-container">
-          <img src={logo} alt="logo" className="logo" />
-
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-              {navValues.map((link, index) => (
-                <Link
-                  key={index}
-                  className="nav-items"
-                  to={link.url}
-                  smooth={true}
-                  duration={500}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              ))}
-              <button
-                className="btn contactMeBtn"
-                data-bs-toggle="modal"
-                data-bs-target="#contactModal"
-              >
-                <img src={contactImg} className="contactMeImg" alt="contact me" /> Contact Me
-              </button>
-            </div>
+          <div className="nav-left">
+            <img src={logo} alt="logo" className="logo" />
             <button className="theme-toggle-btn" onClick={toggleTheme} aria-label="Toggle theme">
               {theme === 'dark' ? '☀️' : '🌙'}
+            </button>
+          </div>
+
+          <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+            {navValues.map((link, index) => (
+              <Link
+                key={index}
+                className="nav-items"
+                to={link.url}
+                smooth={true}
+                duration={500}
+                spy={true}
+                activeClass="active"
+                offset={-70}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+
+          <div className="nav-right">
+            <button
+              className="btn contactMeBtn"
+              data-bs-toggle="modal"
+              data-bs-target="#contactModal"
+            >
+              <img src={contactImg} className="contactMeImg" alt="contact me" /> Contact Me
             </button>
             <button className="hamburger" onClick={toggleMenu} aria-label="Toggle navigation menu">
               <span className="hamburger-line"></span>

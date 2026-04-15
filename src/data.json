@@ -8,44 +8,62 @@
         "links": [
             {
                 "name": "Home",
-                "url": "intro"
+                "url": "intro",
+                "id": "intro"
             },
             {
                 "name": "Experience",
-                "url": "experience"
+                "url": "experience",
+                "id": "experience"
             },
             {
                 "name": "Education",
-                "url": "education"
+                "url": "education",
+                "id": "education"
             },
             {
                 "name": "Skills",
-                "url": "skills"
+                "url": "skills",
+                "id": "skills"
             },
             {
                 "name": "AI Explorations",
-                "url": "ai-exposer"
+                "url": "ai-explorations",
+                "id": "ai-explorations"
             },
             {
                 "name": "Projects",
-                "url": "projects"
+                "url": "projects",
+                "id": "projects"
             },
             {
-                "name": "Testimonials",
-                "url": "clients"
+                "name": "Clients",
+                "url": "clients",
+                "id": "clients"
+            },
+            {
+                "name": "Stats",
+                "url": "stats",
+                "id": "stats"
             }
         ]
     },
     "intro": {
         "name": "Avik Bhattacharjya",
         "designation": "Web Designer & Developer",
-        "summary": "A results-driven Frontend Developer with 7 years of experience crafting high-performance, user-centric web applications. I specialize in transforming designs into pixel-perfect, accessible interfaces using modern frameworks like React, Angular, and Next.js. With a proven track record of leading UI redesigns, building scalable component libraries, and optimizing for speed, I deliver seamless digital experiences that boost user engagement and drive business growth."
+        "summary": "A results-driven Frontend Developer with 7 years of experience crafting high-performance, user-centric web applications. I specialize in transforming designs into pixel-perfect, accessible interfaces using modern frameworks like React, Angular, and Next.js. With a proven track record of leading UI redesigns, building scalable component libraries, and optimizing for speed, I deliver seamless digital experiences that boost user engagement and drive business growth.",
+        "profile_img": "https://via.placeholder.com/300",
+        "social_orbit": [
+            { "name": "Facebook", "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/facebook/facebook-original.svg", "url": "https://www.facebook.com/share/16tukWZdFe/" },
+            { "name": "Instagram", "icon": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg", "url": "https://www.instagram.com/avik.bhattacharjya?igsh=a3ZxaDZ2YjI1ZHRl" },
+            { "name": "LinkedIn", "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linkedin/linkedin-original.svg", "url": "https://linkedin.com/in/avikbhattacharjya" }
+        ]
     },
     "experiences": [
         {
             "company": "Ltimindtree",
             "role": "Fullstack Developer",
-            "designation": "Speialists software engineer",
+            "designation": "Specialist Software Engineer",
             "period": "JUN 2023 — Present",
             "location": "Kolkata, India",
             "description": "Led a comprehensive UI redesign and built a modular component library, delivering pixel-perfect, accessible interfaces with faster load times, improved developer productivity, and higher user engagement.",
@@ -257,7 +275,7 @@
             "degree": "Bachelor's in Computer Applications (BCA)",
             "period": "2015 - 2018",
             "location": "Bankura, India",
-            "description": "Completed a comprehensive curriculum focused on software development, algorithms, and data structures. Final year project involved developing a real-time collaborative coding platform."
+            "description": "Focused on core computing concepts including database management, web technologies, and software engineering principles."
         },
         {
             "id": 3,
@@ -265,7 +283,7 @@
             "degree": "Higher Secondary Education",
             "period": "2012 - 2014",
             "location": "Bankura, India",
-            "description": "Completed a comprehensive curriculum focused on software development, algorithms, and data structures. Final year project involved developing a real-time collaborative coding platform."
+            "description": "Completed primary education with a focus on Mathematics and Computer Science fundamentals."
         }
     ],
     "clients": [
@@ -297,5 +315,50 @@
             "quote": "Implemented a patient-facing booking system that reduced wait times and noticeably improved patient experience.",
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUTHcJsIlvPGkMULAzYAl9y-TXN8aFcThDrg&s"
         }
-    ]
+    ],
+    "stats": [
+        {
+            "id": 1,
+            "label": "Performance Optimization",
+            "value": "40%",
+            "description": "Increase in PageSpeed scores across enterprise portfolios."
+        },
+        {
+            "id": 2,
+            "label": "Developer Efficiency",
+            "value": "2x",
+            "description": "Faster delivery using modular component libraries built from scratch."
+        },
+        {
+            "id": 3,
+            "label": "Accessibility Compliance",
+            "value": "100%",
+            "description": "Ensured WCAG AA standards for government and healthcare portals."
+        }
+    ],
+    "ai_explorations": [
+        {
+            "id": 1,
+            "title": "LLM Integration Suite",
+            "description": "Exploration of OpenAI and Gemini APIs to automate code reviews and documentation generation.",
+            "link": "https://github.com/avik10/ai-suite",
+            "tech": ["Python", "LangChain", "Gemini API"]
+        },
+        {
+            "id": 2,
+            "title": "Neural Style Transfer UI",
+            "description": "A frontend interface for real-time image style transformation using TensorFlow.js.",
+            "link": "https://github.com/avik10/style-transfer",
+            "tech": ["React", "TensorFlow.js", "WebGL"]
+        }
+    ],
+    "contact": {
+        "email": "your.email@example.com",
+        "phone": "+91-XXXXXXXXXX",
+        "socials": [
+            { "platform": "LinkedIn", "url": "https://linkedin.com/in/avikbhattacharjya" },
+            { "platform": "GitHub", "url": "https://github.com/avik10" },
+            { "platform": "Twitter", "url": "https://twitter.com/avik_dev" }
+        ]
+    }
 }

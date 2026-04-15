@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './project.css'
-import data from '../data.json'
+import data from '../../data.json'
 
 const Projects = () => {
   const [selectedId, setSelectedId] = useState(data.projects[0]?.id)

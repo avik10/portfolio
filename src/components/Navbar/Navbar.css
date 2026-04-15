@@ -12,18 +12,41 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+.navbar.navbar-scrolled {
+  background: rgba(15, 23, 42, 0.98);
+  padding: 0.4rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+body.light-theme .navbar.navbar-scrolled {
+  background: rgba(255, 255, 255, 0.98);
+}
+
 body.light-theme .navbar {
   background: rgba(255, 255, 255, 0.85);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .navbar-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
+  padding: 0.8rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-self: start;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-self: end;
 }
 
 .logo {
@@ -38,7 +61,7 @@ body.light-theme .navbar {
 
 .nav-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 1.8rem;
   align-items: center;
 }
 
@@ -141,7 +164,12 @@ body.light-theme .navbar {
   transition: all 0.3s ease;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .hamburger {
     display: flex;
   }
@@ -191,6 +219,11 @@ body.light-theme .navbar {
 
   /* Center the button in mobile menu */
   .contactMeBtn {
+    display: none; /* Keep the header clean on mobile, or move into nav-links if preferred */
+  }
+
+  .nav-links .contactMeBtn {
+    display: flex;
     width: 100%;
     justify-content: center;
     margin-top: 1rem;

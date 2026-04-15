@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import './clients.css'
-import data from '../data.json'
+import data from '../../data.json'
 
 const CLIENTS = data.clients
 

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import './Skills.css'
-import data from '../data.json'
+import data from '../../data.json'
 
 const SKILLS = data.skills
 

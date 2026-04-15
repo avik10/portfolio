@@ -8,6 +8,8 @@ import Footer from "./components/Footer/Footer";
 import AiExposer from "./components/Ai Exposer/AiExposer";
 import Education from "./components/education/Education";
 import BackgroundAnimation from "./components/BackgroundAnimation";
+import Stats from "./components/Stats/Stats";
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
     <Projects />
     <Clients />
     <AiExposer />
+    <Stats />
     <Footer />
     </>
   );

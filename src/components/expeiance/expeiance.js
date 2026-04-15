@@ -1,6 +1,6 @@
 import React from 'react';
 import './experiance.css';
-import data from '../data.json'
+import data from '../../data.json'
 
 const Experaince = ({ experiences = data.experiences }) => {
     return (

@@ -1,6 +1,6 @@
 // /Users/avikbhattacharjya/Official/Development/portfolio/src/components/Education/Education.jsx
 import React from 'react';
-import data from '../data.json';
+import data from '../../data.json';
 import './Education.css';
 
 const Education = () => {

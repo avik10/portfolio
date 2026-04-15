@@ -1,0 +1,105 @@
+.logo-rotation-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+.center-profile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid rgba(59, 130, 246, 0.5);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+}
+
+.orbit-container {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 2px dashed rgba(59, 130, 246, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: blink-glow 2s infinite alternate; /* Added blinking glow animation */
+}
+
+.orbiting-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    margin-left: -25px;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid #3b82f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: orbitRotate 12s linear infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.orbiting-item:hover {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+    animation-play-state: paused;
+}
+
+.orbiting-item img {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+}
+
+/* Staggered Orbit Logic */
+.item-0 { 
+    animation-delay: 0s; 
+}
+.item-1 { 
+    animation-delay: -4s; /* Offset for 3 items in a 12s cycle */
+}
+.item-2 {
+    animation-delay: -8s; /* Offset for 3 items in a 12s cycle */
+}
+
+@keyframes orbitRotate {
+    from {
+        transform: rotate(0deg) translateX(175px) rotate(0deg); /* Keeps icons upright while rotating clockwise */
+    }
+    to {
+        transform: rotate(360deg) translateX(175px) rotate(-360deg);
+    }
+}
+
+/* Keyframes for the blinking glow effect */
+@keyframes blink-glow {
+    0% {
+        box-shadow: 0 0 5px rgba(59, 130, 246, 0.2);
+        border-color: rgba(59, 130, 246, 0.1);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(59, 130, 246, 0.8);
+        border-color: rgba(59, 130, 246, 0.6);
+    }
+}
